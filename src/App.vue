@@ -1,20 +1,8 @@
 <template>
-  <div>
-    <h1>Hello World !</h1>
-    <h2>Server Status : {{ status }}</h2>
-  </div>
+  <app-server-status></app-server-status>
 </template>
 
-<script>
-export default {
-  data: function() {
-    return {
-      status: "Critical"
-    }
-  }
-}
-</script>
-
+<script></script>
 
 <style lang="scss">
 #app {
