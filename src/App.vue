@@ -1,41 +1,29 @@
 <template>
     <div class="container">
-        <div class="row">
-            <div class="col-xs-12">
-                <header>
-                    <h1>Server Status</h1>
-                </header>
-            </div>
-        </div>
+      <myapp-header/>
         <hr>
         <div class="row">
-            <div class="col-xs-12 col-sm-6">
-                <ul class="list-group">
-                    <li
-                      class="list-group-item"
-                      v-for="index in 5"
-                      v-bind:key="index">
-                      Server #{{ index }}
-                    </li>
-                </ul>
-            </div>
-            <div class="col-xs-12 col-sm-6">
-                <p>Server Details are currently not updated</p>
-            </div>
+          <myapp-servers/>
+          <myapp-server-details/>
         </div>
         <hr>
-        <div class="row">
-            <div class="col-xs-12">
-                <footer>
-                    <p>All Servers are managed here</p>
-                </footer>
-            </div>
-        </div>
+      <myapp-footer/>
     </div>
 </template>
 
 <script>
-  export default {}
+  import Header from './Header.vue';
+  import Footer from './Footer.vue';
+  import Servers from './Servers.vue'
+  import ServerDetails from './ServerDetails.vue';
+  export default {
+    components: {
+      'myapp-header': Header,
+      'myapp-footer': Footer,
+      'myapp-servers': Servers,
+      'myapp-server-details': ServerDetails,
+    }
+  }
 </script>
 
 <style>
