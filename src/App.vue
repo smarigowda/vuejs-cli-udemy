@@ -1,12 +1,20 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+  <div>
+    <h1>Hello World !</h1>
+    <h2>Server Status : {{ status }}</h2>
   </div>
 </template>
+
+<script>
+export default {
+  data: function() {
+    return {
+      status: "Critical"
+    }
+  }
+}
+</script>
+
 
 <style lang="scss">
 #app {
