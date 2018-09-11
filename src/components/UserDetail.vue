@@ -10,7 +10,9 @@
   export default {
     props: {
       name: {
-        type: String
+        type: String,
+        // required: true,
+        default: 'Sukruthi'
       }
     },
     methods: {
