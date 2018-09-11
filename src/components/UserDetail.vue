@@ -8,7 +8,11 @@
 
 <script>
   export default {
-    props: ['name'],
+    props: {
+      name: {
+        type: String
+      }
+    },
     methods: {
       switchName() {
         return this.name.toUpperCase()
