@@ -4,16 +4,20 @@
         <p>I'm an awesome User!</p>
         <button @click="changeName">Change Name</button>
         <p>Name: {{ name }}</p>
+        <p>Age: {{ age }}</p>
         <hr>
         <div class="row">
             <div class="col-xs-12 col-sm-6">
                 <app-user-detail
                   :name="name"
                   :resetFn="resetName"
-                  @resetNameEvent="name = $event"></app-user-detail>
+                  @resetNameEvent="name = $event"
+                  :userAge="age"></app-user-detail>
             </div>
             <div class="col-xs-12 col-sm-6">
-                <app-user-edit></app-user-edit>
+                <app-user-edit
+                  :userAge="age"
+                  @ageWasChanged="age = $event"></app-user-edit>
             </div>
         </div>
     </div>
@@ -26,7 +30,8 @@
     export default {
         data: function() {
           return {
-            name: 'Santosh'
+            name: 'Santosh',
+            age: 40
           }
         },
         methods: {
