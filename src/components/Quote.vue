@@ -1,5 +1,5 @@
 <template>
-  <div><p>Lets have a wonderful Quote here...</p></div>
+  <div><h1>Lets have a wonderful Quote here...</h1></div>
 </template>
 
 <script>
@@ -13,6 +13,8 @@ export default {
     border: 1px solid #ccc;
     box-shadow: 1px 1px 2px black;
     padding: 30px;
+    margin: 30px auto;
+    text-align: center;
   }
 </style>
 
