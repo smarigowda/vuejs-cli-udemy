@@ -1,10 +1,10 @@
 <template>
-  <div><h1>Lets have a wonderful Quote here...</h1></div>
+  <div><h1>{{ quote }}</h1></div>
 </template>
 
 <script>
 export default {
-  
+  props: ['quote']
 }
 </script>
 
