@@ -1,6 +1,8 @@
 <template>
   <div>
     <slot name="title"></slot>
+    <span style="color: #ccc"><slot name="subtitle">The Subtitle</slot></span>
+    <hr>
     <slot></slot>
   </div>
 </template>
