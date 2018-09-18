@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
-               <app-quote quote="Wonderful Quote ! Passing props"></app-quote>
+               <app-quote><h1>Wonderful Quote (slot)</h1></app-quote>
             </div>
         </div>
     </div>
