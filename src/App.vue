@@ -41,6 +41,8 @@
     }
 </script>
 
-<style>
-
+<style scoped>
+    hr {
+        border-top: 1px solid black;
+    }
 </style>

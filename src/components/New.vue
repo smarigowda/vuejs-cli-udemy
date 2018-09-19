@@ -15,7 +15,13 @@ export default {
     }
   },
   destroyed() {
-    console.log('New Component: Destroyed !')
+    console.log('New Component: Destroyed !');
+  },
+  activated() {
+    console.log('New Comp: Activated');
+  },
+  deactivated() {
+    console.log('New Comp: De Activated');
   }
 }
 </script>
