@@ -4,8 +4,8 @@
             <div class="col-xs-12">
                 <br>
                 <button class="btn btn-primary" @click="selectAComponent('app-blue', 'Blue Rectangle...')">Load Blue Template</button>
-                <button class="btn btn-success" @click="selectedComponent = 'app-green'">Load Green Template</button>
-                <button class="btn btn-danger" @click="selectedComponent = 'app-red'">Load Red Template</button>
+                <button class="btn btn-success" @click="selectAComponent('app-green', 'Green Rectangle...')">Load Green Template</button>
+                <button class="btn btn-danger" @click="selectAComponent('app-red', 'Red Rectangle...')">Load Red Template</button>
                 <hr>
                 <div v-if="selectedComponent">
                     <component :is="selectedComponent">
