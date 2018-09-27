@@ -2,8 +2,8 @@
   <div>
     <h3>Quotes Added</h3>
     <div class="progress">
-      <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
-        
+      <div class="progress-bar" style="width: 50%">
+
       </div>
     </div>
   </div>
