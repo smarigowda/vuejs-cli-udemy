@@ -32,6 +32,9 @@
         },
         methods: {
             newQuote(quote) {
+                if(this.quotes.length >= this.maxQuotes) {
+                    return alert('Max quotes reached ! Delete some.');
+                }
                 this.quotes.push(quote);
             },
             deleteQuote(index) {
