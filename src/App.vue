@@ -87,7 +87,8 @@
                     <label for="priority">Priority</label>
                     <select
                             id="priority"
-                            class="form-control">
+                            class="form-control"
+                            v-model="selectedPriority">
                         <option v-for="item in priority" :selected="item === 'Low'">{{ item }}</option>
                     </select>
                 </div>
@@ -139,6 +140,7 @@
                 message: 'A text message',
                 sendMail: [],
                 gender: 'Male',
+                selectedPriority: 'High',
                 priority: ['High', 'Medium', 'Low']
             }
         }
