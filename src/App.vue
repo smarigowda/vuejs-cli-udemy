@@ -11,7 +11,8 @@
                                 type="text"
                                 id="email"
                                 class="form-control"
-                                v-model="userData.email">
+                                :value="userData.email"
+                                @input="userData.email = $event.target.value">
                     </div>
                     <div class="form-group">
                         <label for="password">Password</label>
@@ -119,7 +120,7 @@
                             <li v-for="item in sendMail">{{ item }}</li>
                         </ul>
                         <p>Gender: {{ gender }}</p>
-                        <p>Priority:</p>
+                        <p>Priority: {{ selectedPriority }}</p>
                         <p>Switched:</p>
                     </div>
                 </div>
