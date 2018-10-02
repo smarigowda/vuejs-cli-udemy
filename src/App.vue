@@ -3,6 +3,9 @@
         <form>
             <div class="row">
                 <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+                    <app-full-name v-model="fullName"></app-full-name>
+                </div>
+                <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
                     <h1>File a Complaint</h1>
                     <hr>
                     <div class="form-group">
@@ -128,6 +131,7 @@
                         <p>Gender: {{ gender }}</p>
                         <p>Priority: {{ selectedPriority }}</p>
                         <p>Switched: {{ dataSwitch }}</p>
+                        <p>Full Name: {{ fullName }}</p>
                     </div>
                 </div>
             </div>
@@ -137,6 +141,7 @@
 
 <script>
     import Switch from './Switch.vue';
+    import Fullname from './Fullname.vue';
 
     export default {
         data() {
@@ -153,10 +158,12 @@
                 priority: ['High', 'Medium', 'Low'],
                 dataSwitch: true,
                 isFormSubmitted: false,
+                fullName: 'Santosh Marigowda'
             }
         },
         components: {
             appSwitch: Switch,
+            appFullName: Fullname,
         },
         methods: {
             submitted() {
