@@ -8,7 +8,7 @@ Vue.directive('highlight', {
     if(binding.arg === 'background') {
       el.style.backgroundColor = binding.value;
     } else {
-      el.color = binding.value;
+      el.style.color = binding.value;
     }
   }
 })
