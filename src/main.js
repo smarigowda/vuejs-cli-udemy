@@ -19,6 +19,10 @@ Vue.directive('highlight', {
     }, delay);
 
   }
+});
+
+Vue.filter('toLowerCase', function(value) {
+  return value.toLowerCase();
 })
 export const eventBus = new Vue();
 
