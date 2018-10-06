@@ -11,5 +11,8 @@ export const fruitMixin = {
         return d.match(this.filterText);
       })
     }
+  },
+  created() {
+    console.log('[MIXIN] created life cycle hook');
   }
 }

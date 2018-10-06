@@ -22,6 +22,9 @@
         toUppercase(value) {
           return value.toUpperCase();
         }
+      },
+      created() {
+        console.log('[List] created life cycle hook');
       }
     }
 </script>
