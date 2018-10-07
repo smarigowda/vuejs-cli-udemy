@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import App from './App.vue'
 
-Vue.filter('to-lowercase', function(value) {
-    return value.toLowerCase();
+Vue.filter('appendTextGlobal', function(text) {
+    return `${text} (${text.length})`;
 });
 
 Vue.mixin({
