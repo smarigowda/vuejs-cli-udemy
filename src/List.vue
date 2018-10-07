@@ -1,6 +1,8 @@
 <template>
         <div>
               <h1>Filters & Mixins</h1>
+              <button @click="fruits.push('Berries..')" class="btn btn-primary">Add Berries !</button>
+              <hr/>
               <input type="text" v-model="filterText"/>
               <ul>
                 <li v-for="fruit in filteredFruits">{{ fruit }}</li>
