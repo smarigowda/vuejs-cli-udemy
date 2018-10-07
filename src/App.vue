@@ -16,6 +16,9 @@
 
                 <!-- Exercise 3 -->
                 <!-- Do the same as in Exercises 1 & 2, now with Computed Properties -->
+                <h1>Exercise 3:</h1>
+                <p>{{ reverseText }}</p>
+                <p>{{ appendText }}</p>
 
                 <!-- Exercise 4 -->
                 <!-- Share the Computed Property rebuilding Exercise 2 via a Mixin -->
@@ -34,6 +37,14 @@
       filters: {
         reverseText(text) {
           return text.split('').reverse().join('')
+        }
+      },
+      computed: {
+        reverseText() {
+          return this.text.split('').reverse().join('')
+        },
+        appendText() {
+          return `${this.text} (${this.text.length})`;
         }
       }
     }
