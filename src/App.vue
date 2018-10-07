@@ -28,7 +28,9 @@
 </template>
 
 <script>
+    import { appendTextMixin } from './appendTextMixin';
     export default {
+      mixins: [appendTextMixin],
       data() {
         return {
           text: 'Hello Santosh'
@@ -42,9 +44,6 @@
       computed: {
         reverseText() {
           return this.text.split('').reverse().join('')
-        },
-        appendText() {
-          return `${this.text} (${this.text.length})`;
         }
       }
     }
