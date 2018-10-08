@@ -7,7 +7,7 @@
                 <button class="btn btn-primary" @click="setButtonText()">{{ buttonText }}</button>
                 <hr>
                 <transition name="fade">
-                  <div class="alert alert-info" v-if="show">This is some info message</div>
+                  <div class="alert alert-info" v-show="show">This is some info message</div>
                 </transition>
                 <transition name="slide" type="animation">
                   <div class="alert alert-info" v-if="show">This is some info message</div>
