@@ -70,6 +70,7 @@
 
   .slide-leave-active {
     animation: slide-out 1s ease-out forwards;
+    transition: opacity 1s;
   }
 
   @keyframes slide-in {
