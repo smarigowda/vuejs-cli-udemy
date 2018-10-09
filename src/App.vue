@@ -34,7 +34,10 @@
                 <button @click="toggleSelectedComponent" class="btn btn-primary">Toggle Dynamic Component</button>
                 <br/>
                 <br/>
-                <component :is="selectedComponent"></component>
+                <transition name="fade" mode="out-in">
+                  <component :is="selectedComponent"></component>
+                </transition>
+                
             </div>
         </div>
     </div>
@@ -82,7 +85,7 @@
   }
 
   .fade-enter-active {
-    transition: opacity 1s;
+    transition: opacity .5s;
   }
 
   .fade-leave {
@@ -90,7 +93,7 @@
   }
 
   .fade-leave-active {
-    transition: opacity 1s;
+    transition: opacity .5s;
     opacity: 0;
   }
 
