@@ -29,13 +29,14 @@
                   <div class="alert alert-info" v-if="show" key="info">This is some message</div>
                   <div class="alert alert-warning" v-else key="warning">This is some message</div>
                 </transition>
-
+                <app-success-alert></app-success-alert>
             </div>
         </div>
     </div>
 </template>
 
 <script>
+    import SuccessAlert from './SuccessAlert.vue'
     export default {
         data() {
             return {
@@ -53,6 +54,9 @@
               this.buttonText = 'Show Alert!';
             }
           }
+        },
+        components: {
+          'app-success-alert': SuccessAlert
         }
     }
 </script>
