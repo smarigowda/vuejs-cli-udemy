@@ -29,8 +29,12 @@
                   <div class="alert alert-info" v-if="show" key="info">This is some message</div>
                   <div class="alert alert-warning" v-else key="warning">This is some message</div>
                 </transition>
-                <app-success-alert></app-success-alert>
-                <app-danger-alert></app-danger-alert>
+                <!-- <app-success-alert></app-success-alert> -->
+                <!-- <app-danger-alert></app-danger-alert> -->
+                <button @click="toggleSelectedComponent" class="btn btn-primary">Toggle Dynamic Component</button>
+                <br/>
+                <br/>
+                <component :is="selectedComponent"></component>
             </div>
         </div>
     </div>
@@ -45,6 +49,7 @@
                show: true,
                buttonText: 'Show Alert!',
                alertAnimation: 'fade',
+               selectedComponent: 'app-danger-alert'
             }
         },
         methods: {
@@ -54,6 +59,13 @@
               this.buttonText = 'Hide Alert!';
             } else {
               this.buttonText = 'Show Alert!';
+            }
+          },
+          toggleSelectedComponent() {
+            if(this.selectedComponent === 'app-danger-alert') {
+              this.selectedComponent = 'app-success-alert'
+            } else {
+              this.selectedComponent = 'app-danger-alert'
             }
           }
         },
