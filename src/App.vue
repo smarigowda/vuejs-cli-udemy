@@ -30,13 +30,15 @@
                   <div class="alert alert-warning" v-else key="warning">This is some message</div>
                 </transition>
                 <app-success-alert></app-success-alert>
+                <app-danger-alert></app-danger-alert>
             </div>
         </div>
     </div>
 </template>
 
 <script>
-    import SuccessAlert from './SuccessAlert.vue'
+    import SuccessAlert from './SuccessAlert.vue';
+    import DangerAlert from './DangerAlert';
     export default {
         data() {
             return {
@@ -56,7 +58,8 @@
           }
         },
         components: {
-          'app-success-alert': SuccessAlert
+          'app-success-alert': SuccessAlert,
+          'app-danger-alert': DangerAlert,
         }
     }
 </script>
