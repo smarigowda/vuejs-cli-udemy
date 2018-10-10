@@ -42,12 +42,15 @@
                 <br/>
                 <br/>
                 <ul class="list-group">
+                  <transition-group name="slide">
                   <li class="list-group-item"
                       v-for="(number, index) in numbers"
                       :key="number"
                       @click="removeItem(index)">{{ number }}</li>
+                  </transition-group>
                 </ul>
-                
+                <br/>
+                <br/>
             </div>
         </div>
     </div>
@@ -128,9 +131,14 @@
 
   }
 
+  .slide-move {
+    transition: transform 1s;
+  }
+
   .slide-leave-active {
     animation: slide-out 1s ease-out forwards;
     transition: opacity 1s;
+    position: absolute;
   }
 
   @keyframes slide-in {
